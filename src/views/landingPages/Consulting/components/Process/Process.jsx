@@ -28,7 +28,6 @@ const Process = () => {
         >
           Analisamos o seu caso e lhe retornamos em até 12 horas.
           <br />
-          Procedimento simples.
         </Typography>
       </Box>
       <Grid container spacing={4}>
@@ -41,17 +40,17 @@ const Process = () => {
           {
             title: 'Idenficamos',
             subtitle:
-              'Em até 12 horas lhe retornaremos com uma proposta para o serviço que necessita.',
+              'Em até 12 horas entraremos em contato para tirarmos as dúvidas para enviarmos a sua proposta',
           },
           {
-            title: 'Aprovação',
+            title: 'Aprovação da proposta',
             subtitle:
-              'Aguardamos o seu retorno com a aprovação ou necessidade de ajustes em seu projeto.',
+              'Aguardamos o seu retorno com a aprovação da proposta para marcarmos a vistoria.',
           },
           {
-            title: 'Serviço entregue',
+            title: 'Pagamento',
             subtitle:
-              'O seu serviço solicitado é entregue de acordo com as suas demandas.',
+              'O pagamento será feito no local da vistoria. Aceitamos cartão de crédito.',
           },
         ].map((item, i) => (
           <Grid item xs={12} sm={6} md={3} key={i} data-aos={'fade-up'}>

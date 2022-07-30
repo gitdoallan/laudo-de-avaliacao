@@ -31,7 +31,7 @@ export default function MainBanner() {
           fontWeight: 400,
         }}
       >
-        Fazemos laudo de avaliação de imóveis residenciais e comerciais. Emitimos o PTAM (Parecer técnico de Avaliação Mercadológica) por arquiteto certificado em Avalições Imobiliárias e Pericias Judiciais.
+        Fazemos laudo de avaliação de imóveis residenciais e comerciais. Emitimos o Laudo Técnico por arquiteto certificado em Avaliações Imobiliárias e Pericias Judiciais.
         <br />
         Também emitimos laudos judiciais com valor jurídico em ações judiciais por peritos certificados.
         <br />

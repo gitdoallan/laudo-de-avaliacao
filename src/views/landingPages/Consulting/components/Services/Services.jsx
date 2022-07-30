@@ -30,7 +30,7 @@ export default function Services () {
         variant={'h6'}
         component={'p'}
         color={'textSecondary'}
-        align={'center'}
+        align={'justify'}
       >
         A Laudo de Avaliação é uma empresa de Arquitetura, Avaliações Imobiliárias e Perícias Judicias com 25 anos de atuação no mercado em Brasília, São Paulo e Rio de Janeiro.
         <br />
@@ -54,6 +54,7 @@ export default function Services () {
                   'Revisão dos impostos de IPTU',
                   'Financiamentos Bancários',
                   'Imóveis residênciais',
+                  'Inventários',
                   'Imóveis comerciais',
                 ].map((item, i) => (
                   <Grid item xs={12} sm={6} key={i}>
@@ -128,39 +129,7 @@ export default function Services () {
         </Box>
       </Box>
       <br />
-      {' - '}
-      <Box component={Card} boxShadow={4} data-aos={'fade-up'} marginBottom={4}>
-        <Box component={CardContent} padding={{ sm: 4 }}>
-          <Grid container spacing={4}>
-            <Grid item xs={12} sm={6} md={12}>
-              <Box
-                width={'100%'}
-                height={'100%'}
-                paddingTop={{ xs: 4, sm: 0 }}
-                borderTop={{ xs: `1px solid ${theme.palette.divider}`, sm: 0 }}
-              >
-                <Box marginBottom={4}>
-                  <Box
-                    component={Typography}
-                    fontWeight={600}
-                    variant={'h6'}
-                    gutterBottom
-                  >
-                    Projetos de Arquitetura e Home Staging 3D
-                    <br />
-                  </Box>
-                  <Typography>
-                  Fazemos projetos residenciais, comerciais, corporativo trabalhamos com imobiliarias para serviços de home staging 3D (imagens realistas).
-                  </Typography>
-                </Box>
-                <Button size={'large'} variant={'contained'}>
-                  Entrar em contato
-                </Button>
-              </Box>
-            </Grid>
-          </Grid>
-        </Box>
-      </Box>
+
     </Box>
   );
 }
