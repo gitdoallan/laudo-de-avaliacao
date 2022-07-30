@@ -15,7 +15,7 @@ const Main = ({children}) => {
       <AppBar
         position={'fixed'}
         sx={{
-          backgroundColor: theme.palette.background.paper,
+          backgroundColor: theme.palette.background.gray,
         }}
         elevation={1}
       >
