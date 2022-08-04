@@ -34,6 +34,7 @@
     "@mui/icons-material": "^5.0.1",
     "@mui/lab": "^5.0.0-alpha.48",
     "@mui/material": "^5.0.1",
+    "@reduxjs/toolkit": "^1.8.3",
     "aos": "^2.3.4",
     "clsx": "^1.0.4",
     "date-fns": "^2.19.0",
@@ -53,6 +54,7 @@
     "react-slick": "^0.28.1",
     "react-syntax-highlighter": "^15.4.3",
     "react-visibility-sensor": "^5.1.1",
+    "redux": "^4.2.0",
     "slick-carousel": "^1.8.1",
     "web-vitals": "^1.0.1",
     "yup": "^0.32.9"
@@ -61,6 +63,7 @@
     "@typescript-eslint/eslint-plugin": "^4.14.0",
     "@typescript-eslint/parser": "^4.14.0",
     "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.5",
     "babel-plugin-styled-components": "^1.11.1",
     "cross-env": "^7.0.2",
     "eslint": "^7.18.0",
