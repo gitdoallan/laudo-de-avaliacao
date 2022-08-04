@@ -1,13 +1,11 @@
 import React from 'react';
 import Button from '@mui/material/Button';
 import { useSelector } from 'react-redux';
+import { emailApi } from 'services/emailApi';
 
 
 export default function SubmitForm() {
   const { name, email, phone, neighborhood, categories } = useSelector(state => state.formInput);
-  const handleSubmit = () => {
-    console.log(name, email, phone, neighborhood, categories);
-  };
   
   return (
     <Button
@@ -15,7 +13,7 @@ export default function SubmitForm() {
       variant="contained"
       color="primary"
       size="medium"
-      onClick={handleSubmit}
+      onClick={() => emailApi({ name, email, phone, neighborhood, categories })}
       fullWidth
     >
       Enviar solicitação

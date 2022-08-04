@@ -29,6 +29,7 @@
     ]
   },
   "dependencies": {
+    "@emailjs/browser": "^3.6.2",
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
     "@mui/icons-material": "^5.0.1",
@@ -36,6 +37,7 @@
     "@mui/material": "^5.0.1",
     "@reduxjs/toolkit": "^1.8.3",
     "aos": "^2.3.4",
+    "axios": "^0.27.2",
     "clsx": "^1.0.4",
     "date-fns": "^2.19.0",
     "email-validator": "^2.0.4",
