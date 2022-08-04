@@ -3,10 +3,14 @@ import React from 'react';
 import Card from '@mui/material/Card';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Grid';
+import NameInput from '../InputForms/Contact/NameInput';
+import EmailInput from '../InputForms/Contact/EmailInput';
+import PhoneNumberInput from '../InputForms/Contact/PhoneNumberInput';
+import CategoryInput from '../InputForms/Contact/CategoryInput';
+import NeighborhoodInput from '../InputForms/Contact/NeighborhoodInput';
 
 export default function MainBanner() {
 
@@ -51,35 +55,19 @@ export default function MainBanner() {
       <form noValidate autoComplete="off">
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
-            <TextField
-              sx={{ height: 54 }}
-              label="Nome"
-              variant="outlined"
-              color="primary"
-              size="medium"
-              fullWidth
-            />
+            <NameInput />
           </Grid>
           <Grid item xs={12} sm={6}>
-            <TextField
-              sx={{ height: 54 }}
-              label="Email"
-              variant="outlined"
-              color="primary"
-              size="medium"
-              fullWidth
-            />
+            <EmailInput />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <PhoneNumberInput />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <NeighborhoodInput />
           </Grid>
           <Grid item xs={12}>
-            <TextField
-              label="Mensagem"
-              multiline
-              rows={4}
-              variant="outlined"
-              color="primary"
-              size="medium"
-              fullWidth
-            />
+            <CategoryInput />
           </Grid>
           <Grid item xs={12}>
             <Button
@@ -89,7 +77,7 @@ export default function MainBanner() {
               size="medium"
               fullWidth
             >
-            Enviar mensagem
+            Enviar solicitação
             </Button>
           </Grid>
           <Grid item xs={12}>
