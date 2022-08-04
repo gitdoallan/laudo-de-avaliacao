@@ -2,7 +2,6 @@
 import React from 'react';
 import Card from '@mui/material/Card';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Grid';
@@ -11,6 +10,7 @@ import EmailInput from '../InputForms/Contact/EmailInput';
 import PhoneNumberInput from '../InputForms/Contact/PhoneNumberInput';
 import CategoryInput from '../InputForms/Contact/CategoryInput';
 import NeighborhoodInput from '../InputForms/Contact/NeighborhoodInput';
+import SubmitForm from '../InputForms/Contact/SubmitForm';
 
 export default function MainBanner() {
 
@@ -70,15 +70,7 @@ export default function MainBanner() {
             <CategoryInput />
           </Grid>
           <Grid item xs={12}>
-            <Button
-              sx={{ height: 54 }}
-              variant="contained"
-              color="primary"
-              size="medium"
-              fullWidth
-            >
-            Enviar solicitação
-            </Button>
+            <SubmitForm />
           </Grid>
           <Grid item xs={12}>
             <Divider />

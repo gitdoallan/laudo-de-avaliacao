@@ -37,6 +37,7 @@ const removeChars = (number) => {
 };
 
 export const phoneFormatter = (receivedNumber) => {
+  console.log('receivedNumber', receivedNumber);
   const withoutChars = removeChars(receivedNumber);
   const numberArr = withoutChars.split('');
   const formatMobile = ['(', '', ') ', '', '', '', '', '-'];
@@ -53,5 +54,6 @@ export const phoneFormatter = (receivedNumber) => {
     }
   }, []);
   const formattedNumber = formattedNumberArr.join('');
+  console.log(formattedNumber);
   return formattedNumber;
 };

@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import TextField from '@mui/material/TextField';
 import { phoneFormatter } from 'helpers/phoneFormatter';
+import { setInputPhone } from 'redux/slicers/formInputSlicer';
+import { useDispatch, useSelector } from 'react-redux';
 
 export default function PhoneNumberInput() {
-  const [phone, setPhone] = useState('(61) ');
+  const dispatch = useDispatch();
+  const { phone } = useSelector(state => state.formInput);
 
   return (
     <TextField
@@ -13,7 +16,7 @@ export default function PhoneNumberInput() {
       color="primary"
       size="medium"
       value={ phone }
-      onChange={ (e) => setPhone(phoneFormatter(e.target.value)) }
+      onChange={ (e) => dispatch(setInputPhone(phoneFormatter(e.target.value))) }
       fullWidth
       required
     />

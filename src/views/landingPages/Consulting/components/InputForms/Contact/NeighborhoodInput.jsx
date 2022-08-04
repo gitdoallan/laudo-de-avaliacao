@@ -4,13 +4,16 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import { neighborhoods } from 'data/neighborhoods';
+import { setInputNeighborhood } from 'redux/slicers/formInputSlicer';
+import { useDispatch, useSelector } from 'react-redux';
 
-export default function ControlledOpenSelect() {
-  const [age, setAge] = useState('');
+export default function NeighborhoodInput() {
   const [open, setOpen] = useState(false);
+  const dispatch = useDispatch();
+  const { neighborhood } = useSelector(state => state.formInput);
 
   const handleChange = (event) => {
-    setAge(event.target.value);
+    dispatch(setInputNeighborhood(event.target.value));
   };
 
   const handleClose = () => {
@@ -30,7 +33,7 @@ export default function ControlledOpenSelect() {
       <InputLabel
         id="neighborhood-select"
       >
-          Bairro
+          Bairro *
       </InputLabel>
       <Select
         labelId="neighborhood-select"
@@ -38,13 +41,13 @@ export default function ControlledOpenSelect() {
         open={open}
         onClose={handleClose}
         onOpen={handleOpen}
-        value={age}
-        label="Age"
+        value={neighborhood}
+        label="Bairro *"
         onChange={handleChange}
         required
       >
         {neighborhoods.map(({ id, name }) => (
-          <MenuItem key={id} value={id}>{ name }</MenuItem>
+          <MenuItem key={id} value={name}>{ name }</MenuItem>
         ))};
       </Select>
     </FormControl>

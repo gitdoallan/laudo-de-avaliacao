@@ -6,7 +6,6 @@ import { useDispatch, useSelector } from 'react-redux';
 export default function NameInput() {
   const dispatch = useDispatch();
   const { name } = useSelector(state => state.formInput);
-  console.log(name);
   
   return (
     <TextField
