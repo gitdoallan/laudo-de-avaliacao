@@ -26,8 +26,15 @@ export const formInputSlice = createSlice({
     },
     setInputCategories: (state, { payload }) => {
       state.categories = payload;
+    },
+    resetForm: (state) => {
+      state.name = '';
+      state.email = '';
+      state.phone = '(61) ';
+      state.neighborhood = '';
+      state.categories = [];
     }
   }
 });
 
-export const { setInputName, setInputEmail, setInputPhone, setInputNeighborhood, setInputCategories } = formInputSlice.actions;
+export const { setInputName, setInputEmail, setInputPhone, setInputNeighborhood, setInputCategories, resetForm } = formInputSlice.actions;

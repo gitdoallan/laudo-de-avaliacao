@@ -1,11 +1,20 @@
 import React from 'react';
 import Button from '@mui/material/Button';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { resetForm } from 'redux/slicers/formInputSlicer';
 import { emailApi } from 'services/emailApi';
 
 
 export default function SubmitForm() {
   const { name, email, phone, neighborhood, categories } = useSelector(state => state.formInput);
+  const dispatch = useDispatch();
+
+  const handleSubmit = () => {
+    emailApi({ name, email, phone, neighborhood, categories })
+      .then(() => alert('Solicitação enviada com sucesso!'))
+      .catch(() => alert('Erro ao enviar a solicitação! Por favor, tente novamente.'))
+      .finally(() => dispatch(resetForm()));
+  };
   
   return (
     <Button
@@ -13,7 +22,7 @@ export default function SubmitForm() {
       variant="contained"
       color="primary"
       size="medium"
-      onClick={() => emailApi({ name, email, phone, neighborhood, categories })}
+      onClick={handleSubmit}
       fullWidth
     >
       Enviar solicitação
